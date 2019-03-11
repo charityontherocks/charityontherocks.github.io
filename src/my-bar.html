@@ -1,0 +1,131 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+<!--https://elements.polymer-project.org/bower_components/iron-icons/demo/index.html -->
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../bower_components/iron-image/iron-image.html">
+<link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
+<link rel="import" href="../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../bower_components/iron-icons/maps-icons.html">
+<link rel="import" href="../bower_components/iron-icons/editor-icons.html">
+<link rel="import" href="../bower_components/iron-icons/av-icons.html">
+
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="my-bar">
+  <template>
+    <style include="shared-styles">
+      :host {
+      display: block;
+      padding: 10px;
+      @apply(--layout-vertical);
+      @apply(--layout-center);
+      }
+    </style>
+    <iron-ajax
+      handle-as = "json"
+      bubbles="true"
+      content-type='application/json'
+      url="/json/recipes.json"
+      last-response="{{drinks}}"
+      auto>
+    </iron-ajax>
+    <paper-card>
+      <div class="card-content" style="text-align: center;">
+	  <h1 class="goal">Show your commitment to supporting your local community
+	    attracting a crowd of likeminded people to your bar</h1>
+	  <p>Help forge impactful connections between your patrons and
+	  the charity of your choice</p>
+      </div>
+    </paper-card>
+    <div id="info">
+      <paper-card>
+	<div class="card-content">
+	  <div class="card-header">
+	    <h1>What's in it for you: </h1>
+	    <div class="offer-horiz">
+	      <div class="offer-vert">
+		<div>
+		  <iron-icon icon="av:new-releases"></iron-icon>
+		  <span>Promotion and awareness</span> -  to our partner networks
+		</div>
+		<div>
+		  <iron-icon icon="av:playlist-add-check"></iron-icon>
+		  <span>List of vetted charities</span> - know where the money is going
+		</div>
+		<div>
+		  <iron-icon icon="icons:gavel"></iron-icon>
+		  <span>Localized TOS</span> -  we'll keep you of trouble
+		</div>
+	      </div>
+	      <div class="offer-vert">
+		<div>
+		  <iron-icon icon="maps:local-atm"></iron-icon>
+		  <span>All the Tips go to charity</span> - increase in profits stays at the bar
+		</div>
+		<div>
+		  <iron-icon icon="maps:local-bar"></iron-icon>
+		  <span>Cocktail and mixology expertise</span> - with over 20 classic cocktails
+		</div>
+		<div>
+		  <span>
+		  <iron-icon icon="editor:insert-invitation"></iron-icon>
+		  <a href="http://doodle.com/poll/az9d3bi4im4swmmp">Pick a day</a> and your favorite charity and we'll take care of the rest
+		  </span>
+		</div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+      </paper-card>
+    </div>
+    <div class="small_cards">
+      <template is="dom-repeat" items="[[drinks]]">
+	<paper-card class="drinks" image="{{item.img}}">
+	  <div class= "eventcard">
+	    <div class="title overimg">
+	      <p>{{item.name}} @ {{item.bar}}</p>
+	    </div>
+	    
+	    <div class="card-actions">
+	    <template is="dom-repeat" items="{{item.ingr}}">
+	      {{item}} +  
+	    </template>
+	    Ice
+	    </div>
+	  </div>
+	</paper-card>
+      </template>
+    </div>
+    <iron-ajax
+      handle-as = "json"
+      bubbles="true"
+      content-type='application/json'
+      url="/json/bar_quotes.json"
+      last-response="{{quotes}}"
+      auto>
+    </iron-ajax>
+    <template is="dom-repeat" items="[[quotes]]">
+      <paper-card class="quotes">
+	<div class="card-content" style="text-align: center;">
+	  <p>"<i>{{item.quote}}</i>"</p>
+      </div>
+      </paper-card>
+    </template>
+    
+  </template>
+
+  <script>
+    Polymer({
+      is: 'my-bar',
+    });
+  </script>
+</dom-module>

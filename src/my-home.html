@@ -1,0 +1,163 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
+<link rel="import" href="../bower_components/iron-image/iron-image.html">
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="my-home">
+  <template>
+    <iron-ajax
+      handle-as = "json"
+      bubbles="true"
+      content-type='application/json'
+      url="/json/pastEvents.json"
+      last-response="{{events}}"
+      auto>
+    </iron-ajax>
+
+    <style include="shared-styles">
+      :host {
+      display: block;
+      padding: 10px;
+      @apply(--layout-vertical);
+      @apply(--layout-center);
+      }
+      paper-card {
+	  --paper-card-header: {
+	      @apply(--layout-vertical);
+	      @apply(--layout-center);
+	      color: #3F4D59;
+	  };
+	  margin: 5px;
+	  width:100%;
+      }
+      #us {
+      width: 100%;
+      max-width: 755px;
+      }
+      /* fix for midsize..*/
+      #us > paper-card {
+      @apply(--layout-wrap);
+      max-width: 365px;
+      
+      }
+      .aboutus {
+      @apply(--layout-horizontal)
+      
+      }
+      #us iron-icon {
+              overflow: hidden;
+        border-radius: 50%;
+      --iron-icon-height: 100px;
+      --iron-icon-width: 100px;
+      margin: 5px;
+      }
+      .bio {
+      @apply(--layout-vertical);
+      }
+      .sponsor {
+      position: absolute;
+      bottom: 0px;
+      width: 99%;
+
+      @apply(--layout-horizontal);
+      }
+      .flexchild {
+      @apply(--layout-flex);
+      text-align: right;
+      text-size-adjust: auto;
+      }
+      .flexchild span {
+      vertical-align: -webkit-baseline-middle;
+      }
+      .header {
+      color: white;      
+      }
+
+    </style>
+    <paper-card>
+      <div class="card-content" style="text-align: center;">
+	<h1 class="goal">Raise your hopes and glasses for charity!</h1>
+	<div>Exclusive locally inspired drinks to bring the neighborhood together for a local charity</div>
+      </div>
+    </paper-card>
+
+    <div id="us" style="wrap">
+      <paper-card style="">
+	<div class="aboutus">
+	<div class="card-header">
+	  <iron-icon src="/images/werock/caipirinha.JPG"></iron-icon> 
+	</div>
+	<div class="card-content">
+	  <h2>Ligia Ishida</h2>
+	  <div class="bio">
+	    <div>&#x1F60D; Loves making Caipirinhas</div>
+	    <div>&#x1F620; Hates drinking Bloody Marys</div>
+	    <div>&#x1F922; Burger is a hangover cure</div>
+	  </div>
+	</div>
+	</div>
+      </paper-card>
+      <paper-card style="">
+	<div class="aboutus">
+	<div class="card-header">
+	  <iron-icon src="/images/werock/whiskey.JPG"></iron-icon>
+	</div>
+	<div class="card-content">
+	  <h2>Mariya Snow</h2>
+	  <div class="bio">
+	    <div>&#x1F60D; Loves making Rusty Nails</div>
+	    <div>&#x1F620; Hates drinking Hoppy beer</div>
+	    <div>&#x1F922; Bloody Mary is a hangover cure</div>
+	  </div>
+	</div>
+	</div>
+      </paper-card>
+    </div>
+    
+    <template is="dom-repeat" items="[[events]]">
+      <paper-card heading="{{item.name}} - {{item.loc}}" class="fancy">
+	<div class= "eventcard" style="width:inherit">
+	  <img style="width:inherit" src="{{item.image}}">
+	  <div class="sponsor overimg">
+	    <div>
+	    <a href="{{item.charitylink}}" tabindex="-1">
+	      <paper-icon-button class="big"  style="min-height:80px; min-width:80px; max-width:100px; height: auto;  width: auto; " src="{{item.charlogo}}"></paper-icon-button>
+	    </a>
+	    <span>&</span>
+	    </div>
+	    <div>
+	    <a href="{{item.barlink}}" tabindex="-1">
+	      <paper-icon-button class="big" style="min-height:80px; min-width:80px; max-width:100px;height: auto;  width: auto;" src="{{item.barlogo}}"></paper-icon-button>
+	    </a>
+	    </div>
+	    <div class="flexchild"><span>{{item.descr}}</span></div>
+
+<!--	    <div class="title overimg"></div>-->
+
+	  </div>
+      </paper-card>
+    </template>
+
+  </template>
+
+  <script>
+    Polymer({
+    is: 'my-home',
+    properties: {
+    events: Object,
+    },
+    });
+  </script>
+</dom-module>

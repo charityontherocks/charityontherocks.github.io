@@ -1,0 +1,143 @@
+[
+    {
+	"name": "#ChicoOnTheRocks",
+	"image": "/images/werock/chicoontheroks.jpg",
+	"bar": "ElixurSf",
+	"barlink": "https://www.elixirsf.com/",
+	"barlogo": "/images/logos/elixursf.webp",
+	"charity": "North Valley Community Camp Fire",
+	"charitylink": "https://www.nvcf.org/",
+	"charlogo": "/images/logos/nvcf.png",
+	"descr": "Forest fire relief efforts",
+	"loc": "San Francisco, CA"
+	
+    },
+    {
+	"name": "#bogontherocks",
+	"image": "/images/werock/bogontherocks.JPG",
+	"bar": "La Bolera",
+	"barlink": "http://www.labolera.co/",
+	"barlogo": "/images/logos/labolera.png",
+	"charity": "Proteccion Animales BOG",
+	"charitylink": "https://twitter.com/AnimalesBOG",
+	"charlogo": "/images/logos/animalesbog.png",
+	"descr": "Rescue trafficked and abused animals",
+	"loc": "Bogota, Colombia"
+	
+    },
+    {
+	"name": "#sonrisasontherocks",
+	"image": "/images/werock/jugamos.JPG",
+	"bar": "Selina Playground",
+	"barlink": "https://www.selina.com",
+	"barlogo": "/images/logos/selina.png",
+	"charity": "Jugamos En el Bosque",
+	"charitylink": "http://www.fundacionjb.org/",
+	"charlogo": "/images/logos/jeb.png",
+	"descr": "Develop trainings and workshops to encourage Medellin teenagers to have a life  disconnected from violence.",
+	"loc": "Medellin, Colombia"
+	
+    },
+    {
+	"name": "#rysounds",
+	"image": "/images/werock/rysounds.JPG",
+	"bar": "RY Sounds",
+	"barlink": "https://remoteyear.com/business",
+	"barlogo": "/images/logos/ry.png",
+	"charity": "PitStop Cafe",
+	"charitylink": "https://www.pitstopcafekl.com/",
+	"charlogo": "/images/logos/pitstop.png",
+	"descr": "Avg 6,500 meals served monthly to members of marginalised communities in KL",
+	"loc": "KL, Malaysia"
+	
+    },
+    {
+	"name": "#lifestyleontherocks",
+	"image": "/images/werock/lifestyleontherocks.JPG",
+	"bar": "Baa(n) Din",
+	"barlink": "https://www.facebook.com/baandinnimman13/",
+	"barlogo": "/images/logos/baandin.png",
+	"charity": "The Branch Foundation",
+	"charitylink": "http://thebranchfoundation.org/",
+	"charlogo": "/images/logos/branchfoundation.png",
+	"descr": "Career Development for Thai Minority Groups",
+	"loc": "Chiang Mai, Thailand"
+	
+    },
+    {
+	"name": "#SofiaOnTheRocks",
+	"image": "/images/werock/sofiaontherocks.jpg",
+	"bar": "COM.BAR",
+	"barlink": "https://www.facebook.com/BAR.com.bar/",
+	"barlogo": "/images/logos/combar.jpg",
+	"charity": "Give a Book",
+	"charitylink": "http://www.podaretekniga.org/",
+	"charlogo": "/images/logos/podariknigu.png",
+	"descr": "Literacy for orphans",
+	"loc": "Sofia, Bulgaria"
+	
+    },
+    {
+	"name": "#ReFoodOnTheRocks",
+	"image": "/images/werock/refoodontherocks.JPG",
+	"bar": "Hennessy's Irish Pub",
+	"barlink": "http://www.hennessys-pub.com/",
+	"barlogo": "/images/logos/hennesseys.jpg",
+	"charity": "ReFood",
+	"charitylink": "https://www.re-food.org/",
+	"charlogo": "/images/logos/refood.png",
+	"descr": "Feeding the homeless",
+	"loc": "Lisbon, Portugal"
+	
+    },
+    {
+	"name": "#RAINBOWONTHEROCKS",
+	"image": "/images/werock/pianobarpride.JPG",
+	"bar": "Piano Bar",
+	"barlink": "http://piano-bar.cz/",
+	"barlogo": "/images/logos/pianobar.png",
+	"charity": "Prague Pride",
+	"charitylink": "https://www.praguepride.cz/en/",
+	"charlogo": "/images/logos/praguepride.png",
+	"descr": "Equality for the LGBT community",
+	"loc": "Prague, czech republic"
+	
+    },
+    {
+	"name": "#PUBFORPUPS",
+	"image": "/images/werock/fensi.jpg",
+	"bar": "Fensi Smensi",
+	"barlink": "https://www.facebook.com/FensiSmensiSplit/",
+	"barlogo": "/images/logos/fensi.png",
+	"charity": "Animal Protective Foundation Split",
+	"charitylink": "https://www.facebook.com/animalprotectivefoundationsplit/",
+	"charlogo": "/images/logos/apfsplit.png",
+	"descr": "Support a no kill shelter",
+	"loc": "Split, Croatia"
+	
+    },
+    {
+	"name": "Bartending for Charity",
+	"image": "/images/werock/ceaseanddesist.jpg",
+	"bar": "Cease and Desist",
+	"barlink": "http://ceaseanddesistsf.com/",
+	"barlogo": "/images/logos/cdesist.png",
+	"charity": "Avon 39",
+	"charitylink": "http://www.avon39.org/",
+	"charlogo": "/images/logos/avon39.png",
+	"descr": "Walk to end breast cancer",
+	"loc": "San Francisco, CA USA"
+    },
+    {
+	"name": "DRINK UP GIVE BACK",
+	"image": "/images/werock/tonic.jpg",
+	"bar": "Tonic Bar",
+	"barlink": "http://tonicbar-sf.com/",
+	"barlogo": "/images/logos/tonic.png",
+	"charity": "Educate 2 envision",
+	"charitylink": "http://www.educate2envision.org/",
+	"charlogo": "/images/logos/e2e.png",
+	"descr": "Education for children of Honduras",
+	"loc": "San Francisco, CA USA"
+    }
+]

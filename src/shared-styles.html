@@ -1,0 +1,176 @@
+<!--
+@author mariya snow
+inspired by
+https://www.design-seeds.com/wander/wanderlust/a-door-hues-8/
+http://www.colourlovers.com/web/trends/websites/7412/Shiner_Beers_%7C_www.shiner.com
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<!-- shared styles for all views -->
+<dom-module id="shared-styles">
+  <template>
+    <style>
+:host {
+    --app-card-color: #FFF;
+    /*--#E7DFD2;--*/
+    --app-goal-color: #652920;
+    /*--#3F4D59; h1 --*/
+    --app-title-text-color: #652920;
+    /*--#3F4D59;--*/
+    --app-max-width: 755px;
+    --app-dark-bkgrnd: #F38F1F;
+    --app-header-color: #3F4D59;
+     }
+paper-card {
+    background-color: var(--app-card-color);
+    max-width: var(--app-max-width);
+    margin: 5px;
+    border-radius: 10px;
+}
+.circle {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    text-align: center;
+    color: #fff;
+    border-radius: 50%;
+    background: #ddd;
+    font-size: 30px;
+    line-height: 64px;
+}
+
+      h1 {
+	  text-rendering: optimizeLegibility;
+	  margin: 16px 0;
+	  color: var(--app-goal-color);
+	  font-family: Oswald, sans-serif;
+	  font-weight: 400;
+	  font-style: normal;
+	  font-size: 28px;
+	  line-height: 1.2em;
+	  text-transform: uppercase;
+      }
+      h3 {
+	  text-rendering: optimizeLegibility;
+	  margin: 16px 0;
+	  color: var(--app-goal-color);
+	  font-family: Oswald, sans-serif;
+	  font-weight: 10;
+	  font-style: normal;
+	  font-size: 22px;
+	  line-height: 1.4em;
+      }
+
+      .header .title-text {
+	 /*color: var(--app-title-text-color); */
+     }
+      /* misson statement */
+      .goal {
+	  color: var(--app-goal-color);/*#981010;*/
+      }
+      paper-card {
+     margin: 5px;
+      }
+
+      #info paper-card {
+            width: 100%;
+      }
+      .charity {
+	      max-width: var(--app-max-width);
+	      width: 100%;
+      }
+     .charity paper-card {
+     text-transform: none;
+     width: 100%;
+     }
+     .small_cards {
+     @apply(-layout-horizontal);
+     @apply(--layout-center);
+     max-width: var(--app-max-width);
+     width: 100%;
+     }
+      paper-card.events /deep/ .header {
+	  max-height: 365px;
+	  max-width: 365px;
+	  min-height: 360px;
+	  min-width: 360px;
+      }
+
+     paper-card.drinks {
+     max-width: 360px;
+     }
+     .overimg {
+
+     }
+      paper-card.drinks /deep/ .header {
+	  max-height: 365px;
+	  max-width: 365px;
+	  min-height: 360px;
+	  min-width: 360px;
+      }
+     .eventcard {
+	 position: relative;
+      }
+      .eventcard .overimg { 
+	  color: white; 
+	  background: var(--app-dark-bkgrnd); /* fallback color black*/
+	  padding: 5px;
+	  border-radius: 10px;
+      }
+     .sepia {
+	 filter: sepia(100%);
+	 -webkit-filter: sepia(1);  
+     }
+     .eventcard img {
+	 filter: sepia(60%);
+     }
+     .title {
+	 position: absolute; 
+	 bottom: 56px; 
+	 left: 0; 
+	 width: 97.5%;
+	 max-height: 100px;
+     }
+     .title-char {
+	 position: absolute; 
+	 bottom: 68px; 
+	 left: 0; 
+	 width: 97.5%;
+	 max-height: 100px;
+     }
+     .card-actions {
+	 overflow-x: auto;
+	 max-inline-size: 365px;
+	 min-block-size: 50px;
+     }
+     .offer-vert {
+	 @apply(--layout-vertical);
+     }
+     .offer-vert div {
+	 margin:10px;
+      }
+     .offer-horiz {
+	 @apply(--layout-horizontal);
+     }
+     .offer-horiz div {
+	 margin:10px;
+     }
+     .offer-vert div a {
+	 color: var(--app-goal-color);
+     }
+     .offer-vert div span {
+	 font-size: 20px;
+     }
+     /* iphone */
+     @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+     img { max-width: 100%; }
+     }
+
+     /* ipad */
+     @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+     img { max-width: 100%; }
+     }
+    </style>
+  </template>
+</dom-module>
