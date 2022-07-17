@@ -1,5 +1,17 @@
 [
     {
+	"name": "#healthcareontherocks",
+	"image": "/images/werock/CaliforniaJacksPlannedParenthood.jpg",
+	"bar": "California Jacks",
+	"barlink": "https://sodapopinskisf.com/",
+	"barlogo": "/images/logos/CaliforniaJacks.jpeg",
+	"charity": "Planned Parenthood",
+	"charitylink": "https://www.plannedparenthoodaction.org/",
+	"charlogo": "/images/logos/PlannedParenthood.jpeg",
+	"descr": "Supporting reproductive healthcare",
+	"loc": "San Francisco, CA USA"
+    },
+    {
 	"name": "#ChicoOnTheRocks",
 	"image": "/images/werock/chicoontheroks.jpg",
 	"bar": "ElixurSf",
@@ -132,7 +144,7 @@
 	"name": "DRINK UP GIVE BACK",
 	"image": "/images/werock/tonic.jpg",
 	"bar": "Tonic Bar",
-	"barlink": "http://tonicbar-sf.com/",
+	"barlink": "https://sodapopinskisf.com/",
 	"barlogo": "/images/logos/tonic.png",
 	"charity": "Educate 2 envision",
 	"charitylink": "http://www.educate2envision.org/",
