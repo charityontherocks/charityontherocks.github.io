@@ -1,5 +1,17 @@
 [
     {
+	"name": "#bayontherocks",
+	"image": "/images/werock/elixirSFbaykeeper.jpeg",
+	"bar": "ElixirSF",
+	"barlink": "https://www.elixirsf.com/",
+	"barlogo": "/images/logos/elixursf.webp",
+	"charity": "SFBaykeeper",
+	"charitylink": "https://baykeeper.org/",
+	"charlogo": "/images/logos/sfbaykeeper.jpeg",
+	"descr": "Algae bloom in SF Bay",
+	"loc": "San Francisco, CA USA"
+    },
+    {
 	"name": "#healthcareontherocks",
 	"image": "/images/werock/CaliforniaJacksPlannedParenthood.jpg",
 	"bar": "California Jacks",
